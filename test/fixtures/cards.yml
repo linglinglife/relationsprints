@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sentiment: 1
+  incident: MyText
+  feeling: MyText
+  expectation: MyText
+  importance: 1
+  user_id: 1
+  sprint_id: 1
+
+two:
+  sentiment: 1
+  incident: MyText
+  feeling: MyText
+  expectation: MyText
+  importance: 1
+  user_id: 1
+  sprint_id: 1
