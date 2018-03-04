@@ -1,6 +1,6 @@
 class Sprint < ApplicationRecord
 
-  belongs_to :card, optional: true
-  
+  has_many :cards
+  belongs_to :workspace, optional: true
 
 end

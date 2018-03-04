@@ -2,6 +2,7 @@ class User < ApplicationRecord
 
   has_many :cards
   has_many :sprints, through: :cards
+  has_and_belongs_to_many :workspaces
   has_many :tasks
   has_many :comments
 

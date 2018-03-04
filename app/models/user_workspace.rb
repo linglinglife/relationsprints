@@ -1,0 +1,2 @@
+class UserWorkspace < ApplicationRecord
+end

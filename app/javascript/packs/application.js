@@ -9,11 +9,23 @@
 
 console.log('Hello World from Webpacker')
 
-import React from 'react';
+import React, {Component} from 'react';
 import { render } from 'react-dom';
-import SampleComponent from '../components/SampleComponent';
+import Column from '../components/Column';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.body.appendChild(document.createElement('div'));
-  render(<SampleComponent/>, container);
-});
+
+class App extends Component {
+
+  render(){
+    return (
+      <div>
+        <Column />
+        <Column />
+        <Column />
+      </div>
+    )
+  }
+}
+
+
+ReactDOM.render( <App />, document.getElementById('app') );

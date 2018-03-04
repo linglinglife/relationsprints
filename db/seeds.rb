@@ -8,26 +8,26 @@
 
 User.destroy_all
 
-u1 = User.create name:'a1', email: 'a1@mail.com', password: 'chicken', relationship_status: 1
-u2 = User.create name:'a2', email: 'a2@mail.com', password: 'chicken', relationship_status: 1
-u3 = User.create name:'s', email: 's@mail.com', password: 'chicken', relationship_status: 0
+u1 = User.create name:'a1', email: 'a1@mail.com', password: 'chicken', relationship_status: 1, workspace_id: w1
+u2 = User.create name:'a2', email: 'a2@mail.com', password: 'chicken', relationship_status: 1, workspace_id: w1
+u3 = User.create name:'s', email: 's@mail.com', password: 'chicken', relationship_status: 0, workspace_id: w2
 
 puts "Created #{ User.all.length } users."
 
 Card.destroy_all
 
-c1 = Card.create sentiment: 0, incident: "This happened", feeling: "okay", expectation: "That it was expected", importance: 6, user_id: u1
-c2 = Card.create sentiment: 1, incident: "This didn't happened", feeling: "meh", expectation: "That it should happen differently", importance: 8, user_id: u1
-c3 = Card.create sentiment: 0, incident: "This happened", feeling: "great", expectation: "That it was expected", importance: 5, user_id: u2
-c4 = Card.create sentiment: 1, incident: "This happened", feeling: "awesome", expectation: "That it was expected", importance: 3, user_id: u2
-c5 = Card.create sentiment: 2, incident: "This didn't happened", feeling: "I don't know", expectation: "I don't know", importance: 7, user_id: u3
+c1 = Card.create sentiment: 0, incident: "This happened", feeling: "okay", expectation: "That it was expected", importance: 6, user_id: u1, sprint_id: s1, shared: true, resolved: true
+c2 = Card.create sentiment: 1, incident: "This didn't happened", feeling: "meh", expectation: "That it should happen differently", importance: 8, user_id: u1, sprint_id: s1, shared: true, resolved: false
+c3 = Card.create sentiment: 0, incident: "This happened", feeling: "great", expectation: "That it was expected", importance: 5, user_id: u2, sprint_id: s1, shared: true, resolved: false
+c4 = Card.create sentiment: 1, incident: "This happened", feeling: "awesome", expectation: "That it was expected", importance: 3, user_id: u2, sprint_id: s1, shared: true, resolved: false
+c5 = Card.create sentiment: 2, incident: "This didn't happened", feeling: "I don't know", expectation: "I don't know", importance: 7, user_id: u3, sprint_id: s2, shared: false, resolved: false
 
 puts "Created #{ Card.all.length } cards."
 
 Sprint.destroy_all
 
-s1 = Sprint.create status: true, start: "2018-02-01", end: "2018-02-14"
-s2 = Sprint.create status: false, start: "2018-02-15", end: "2018-02-28"
+s1 = Sprint.create status: true, start: "2018-02-01", end: "2018-02-14", workspace_id: w1
+s2 = Sprint.create status: false, start: "2018-02-15", end: "2018-02-28", workspace_id: w2
 
 puts "Created #{ Sprint.all.length } sprints."
 
@@ -46,4 +46,11 @@ m1 = Comment.create title: "hi", description: "this is a comment", user_id: u1, 
 m2 = Comment.create title: "bye", description: "this is not a comment", user_id: u1, card_id: c3
 m3 = Comment.create title: "oops", description: "this is an accidental comment", user_id: u2, card_id: c3
 
-puts "Created #{ Comment.all.length } tasks."
+puts "Created #{ Comment.all.length } comments."
+
+Workspace.destroy_all
+
+w1 = Workspace.create name: "Relationship Review", access_token: "abcd1234"
+w2 = Workspace.create name: "Personal Reflection", access_token: "pewpewpew"
+
+puts "Created #{ Workspace.all.length } workspaces."
