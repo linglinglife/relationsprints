@@ -1,2 +1,0 @@
-class UserWorkspace < ApplicationRecord
-end
