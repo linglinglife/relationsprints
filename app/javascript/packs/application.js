@@ -24,9 +24,8 @@ class App extends Component {
       <div>
         <h1>RELATIONSPRINT</h1>
         <Router>
-
           <Route exact path="/" component={ HomePage } />
-
+          {/* <Route exact path="/" */}
         </Router>
 
       </div>
