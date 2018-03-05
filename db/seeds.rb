@@ -36,9 +36,15 @@ Card.destroy_all
 
 c1 = Card.create sentiment: 0, incident: "This happened", feeling: "okay", expectation: "That it was expected", importance: 6, user: u1, sprint: s1, shared: true, resolved: true
 c2 = Card.create sentiment: 1, incident: "This didn't happened", feeling: "meh", expectation: "That it should happen differently", importance: 8, user: u1, sprint: s1, shared: true, resolved: false
-c3 = Card.create sentiment: 0, incident: "This happened", feeling: "great", expectation: "That it was expected", importance: 5, user: u2, sprint: s1, shared: true, resolved: false
-c4 = Card.create sentiment: 1, incident: "This happened", feeling: "awesome", expectation: "That it was expected", importance: 3, user: u2, sprint: s1, shared: true, resolved: false
-c5 = Card.create sentiment: 2, incident: "This didn't happened", feeling: "I don't know", expectation: "I don't know", importance: 7, user: u3, sprint: s2, shared: false, resolved: false
+c3 = Card.create sentiment: 0, incident: "This happened to me", feeling: "great", expectation: "That it was expected", importance: 5, user: u1, sprint: s1, shared: true, resolved: false
+c4 = Card.create sentiment: 1, incident: "This happened just now!", feeling: "awesome", expectation: "That it was expected", importance: 3, user: u1, sprint: s1, shared: true, resolved: false
+c5 = Card.create sentiment: 2, incident: "This happened???", feeling: "I don't know", expectation: "I don't know", importance: 7, user: u1, sprint: s1, shared: true, resolved: false
+c6 = Card.create sentiment: 2, incident: "Not sure", feeling: "off", expectation: "Something else", importance: 5, user: u1, sprint: s1, shared: true, resolved: false
+c7 = Card.create sentiment: 2, incident: "Shrug", feeling: "eep", expectation: "I don't know", importance: 2, user: u1, sprint: s1, shared: true, resolved: false
+c8 = Card.create sentiment: 1, incident: "This kind of happened", feeling: "a little bit meh", expectation: "anything but this", importance: 10, user: u1, sprint: s1, shared: true, resolved: true
+c9 = Card.create sentiment: 0, incident: "This really happened", feeling: "I don't know", expectation: "I don't know", importance: 6, user: u1, sprint: s1, shared: true, resolved: true
+c10 = Card.create sentiment: 0, incident: "This is what happened", feeling: "Amazing", expectation: "Not this obviously", importance: 9, user: u2, sprint: s1, shared: true, resolved: true
+
 
 puts "Created #{ Card.all.length } cards."
 

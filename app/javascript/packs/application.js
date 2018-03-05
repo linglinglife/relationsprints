@@ -10,23 +10,39 @@
 console.log('Hello World from Webpacker')
 
 import React, {Component} from 'react';
-import { render } from 'react-dom';
-import Column from '../components/Column';
+import ReactDOM, { render } from 'react-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
+
+import HomePage from '../components/HomePage';
 
 
 class App extends Component {
 
   render(){
     return (
+
       <div>
-        <h1></h1>
-        <Column />
-        <Column />
-        <Column />
+        <h1>RELATIONSPRINT</h1>
+        <Router>
+
+          <Route exact path="/" component={ HomePage } />
+
+        </Router>
+
       </div>
+
     )
   }
 }
 
+// if (document.getElementById('app')){
+//   console.log('here');
+// }
+//   const container = document.body.appendChild(document.createElement('div'));
+//   render(<App />, container);
 
-ReactDOM.render( <App />, document.getElementById('app') );
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('app')){
+    ReactDOM.render(<App/>, document.getElementById('app') );
+  }
+});
