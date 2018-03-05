@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  get '/cards' => 'cards#get_user_cards'
+
+
+  resources :users
+
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

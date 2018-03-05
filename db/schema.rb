@@ -55,16 +55,18 @@ ActiveRecord::Schema.define(version: 20180304113458) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_workspaces", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.text "name"
     t.text "email"
     t.text "password_digest"
     t.integer "relationship_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users_workspaces", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "workspace_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

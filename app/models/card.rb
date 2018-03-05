@@ -6,6 +6,6 @@ class Card < ApplicationRecord
   has_many :tasks
   has_many :comments
 
-  enum sentiment: [:positive, :negative, :neutral]
+  enum sentiment: [:positive, :negative, :confused]
 
 end

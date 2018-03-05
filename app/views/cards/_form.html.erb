@@ -1,0 +1,27 @@
+<% if flash[:errors] %>
+  <strong>Oops! Did you forget something?</strong>
+  <ul>
+  <% flash[:errors].each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @card do |form| %>
+
+  <%= form.label :incident, "What happened?" %>
+  <%= form.text_field :incident %>
+  <br>
+  <%= form.label :feeling, "How do you feel about it?" %>
+  <%= form.text_field :feeling %>
+  <br>
+  <%= form.label :expectation, "What did you expect to happen?" %>
+  <%= form.text_field :expectation %>
+  <br>
+  <%= form.label :importance, "How important is this to you?" %>
+  <%= form.number_field :importance %>
+
+  <%= submit_tag 'Add new card' %>
+
+
+<% end %>
