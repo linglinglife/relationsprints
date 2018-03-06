@@ -18,12 +18,19 @@ export default class CardList extends Component {
   render() {
 
     const info = this.props.cards.map( card => {
-      return <div>
-      <li>{card.incident}</li>
-      <li>{card.feeling}</li>
-      <li>{card.expectation}</li>
-      <li>{card.importance}</li>
-      </div>
+      return (
+        <div>
+          <span>What happened?</span>
+          <p>{card.incident}</p>
+          <span>How do you feel about it?</span>
+          <p>{card.feeling}</p>
+          <span>What was your expectation?</span>
+          <p>{card.expectation}</p>
+          <span>How important is this to you?</span>
+          <p>{card.importance}</p>
+
+        </div>
+      )
     })
 
     return (
