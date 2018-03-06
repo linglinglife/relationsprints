@@ -10,15 +10,26 @@ export default class CardList extends Component {
       super( props );
 
       this.state = {
-        sentiments: null
+        sentiment: null,
+        cards: null
       };
     }
 
   render() {
+
+    const info = this.props.cards.map( card => {
+      return <div>
+      <li>{card.incident}</li>
+      <li>{card.feeling}</li>
+      <li>{card.expectation}</li>
+      <li>{card.importance}</li>
+      </div>
+    })
+
     return (
       <div>
-        <h1>Sentiment</h1>
-        <h1>Cards</h1>
+        <h1>{this.props.sentiment}</h1>
+        <h1>{info}</h1>
       </div>
 
     );

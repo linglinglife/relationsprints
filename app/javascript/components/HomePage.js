@@ -27,8 +27,8 @@ export default class HomePage extends Component {
       return <div>Loading...</div>;
     }
 
-    const cards = Object.keys(this.state.sentiments).map( k => {
-      return <CardList sentiment={k} cards={this.state.sentiments[k]}/>;
+    const cards = Object.keys(this.state.sentiments).map( key => {
+      return <CardList sentiment={key} cards={this.state.sentiments[key]}/>;
     });
 
     return (
