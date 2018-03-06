@@ -14,7 +14,8 @@ import ReactDOM, { render } from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
 import HomePage from '../components/HomePage';
-
+// import CardList from '../components/CardList';
+// import Card from '../components/Card';
 
 class App extends Component {
 
@@ -25,7 +26,8 @@ class App extends Component {
         <h1>RELATIONSPRINT</h1>
         <Router>
           <Route exact path="/" component={ HomePage } />
-          {/* <Route exact path="/" */}
+          {/* <Route exact path="/cardlist" component={ CardList }/> */}
+          {/* <Route path="/card/:id" component={ ShowCard }/> */}
         </Router>
 
       </div>
