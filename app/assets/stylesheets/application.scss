@@ -13,4 +13,14 @@
  *= require_tree .
  *= require_self
  */
- 
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-image: url("blue.jpg");
+}
+
+h1 {
+  color: white;
+}
