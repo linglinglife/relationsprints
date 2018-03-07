@@ -34,9 +34,9 @@ export default class CardList extends Component {
     })
 
     return (
-      <div>
+      <div className="col-md-4">
         <h1>{this.props.sentiment}</h1>
-        <h1>{info}</h1>
+        <div className="cardlist">{info}</div>
       </div>
 
     );

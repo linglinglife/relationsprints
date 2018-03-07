@@ -32,7 +32,7 @@ export default class HomePage extends Component {
     });
 
     return (
-      <div className>
+      <div className="container">
         {cards}
       </div>
 
