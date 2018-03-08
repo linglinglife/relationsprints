@@ -11,14 +11,16 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   get '/cards' => 'cards#get_user_cards'
-  post 'cards' => 'cards#create'
+  post '/cards' => 'cards#create'
+  # delete '/card/:id' => 'cards#delete'
 
   get '/app' => 'app#index'
 
-
-
-  get '/workspaces' => 'workspaces#new'
-
+  get '/workspaces' => 'workspaces#index'
+  # post '/workspaces' => 'workspaces#create'
+  # route to share workspaces
+  # => 'workspaces#share_with_user'
+  # delete '/workspace/:id' => 'workspaces#delete'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

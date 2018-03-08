@@ -14,24 +14,23 @@ import ReactDOM, { render } from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
 import HomePage from '../components/HomePage';
-// import CardList from '../components/CardList';
+import Workspace from '../components/Workspace';
 // import Card from '../components/Card';
 
 class App extends Component {
 
   render(){
     return (
+      <Router>
+        <div>
+          <h1>RELATIONSPRINT</h1>
 
-      <div>
-        <h1>RELATIONSPRINT</h1>
-        <Router>
-          <Route exact path="/" component={ HomePage } />
-          {/* <Route exact path="/cardlist" component={ CardList }/> */}
-          {/* <Route path="/card/:id" component={ ShowCard }/> */}
-        </Router>
+            <Route exact path="/" component={ HomePage } />
+            <Route exact path="/workspaces" component={ Workspace }/>
+            {/* <Route path="/card/:id" component={ ShowCard }/> */}
 
-      </div>
-
+          </div>
+      </Router>
     )
   }
 }

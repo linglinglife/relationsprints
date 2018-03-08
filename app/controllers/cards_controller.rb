@@ -3,7 +3,10 @@ class CardsController < ApplicationController
   before_action :check_if_logged_in, except: [:show]
 
   def get_user_cards
-    cards = Card.where(user: @current_user).group_by &:sentiment
+    reverse_cards = Card.order(created_at: :desc)
+    cards = reverse_cards.where(user: @current_user).group_by &:sentiment
+    # binding.pry
+    # reversed_cards = cards.order(:created_at)
     render json: cards
   end
 

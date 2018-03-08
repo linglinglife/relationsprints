@@ -36,8 +36,10 @@ export default class CardList extends Component {
     return (
       <div className="col-md-4">
         <h1>{this.props.sentiment}</h1>
-        <button onClick={ () => this.props.onaddclick(this.props.sentiment) }>+</button>
-        <div className="cardlist">{info.reverse()}</div>
+        <div className="cardlist">
+          <button onClick={ () => this.props.onaddclick(this.props.sentiment) }>+</button>
+          {info}
+        </div>
       </div>
 
     );
