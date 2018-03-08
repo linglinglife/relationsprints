@@ -16,15 +16,16 @@ class CardsController < ApplicationController
   end
 
   def create
+    # binding.pry
+    # render json: params
     card = Card.new card_params
     card.user = @current_user
     if card.save
-      redirect_to @current_user
+      render json: card, status: :ok
     else
-      flash[:errors] = card.errors.full_messages
-      @card = card
-      render :new
+      render json: {error: card.errors}, status: :unprocessable_entity
     end
+
   end
 
   def edit
@@ -49,7 +50,7 @@ class CardsController < ApplicationController
 
   private
   def card_params
-      params.require(:card).permit(:sentiment, :incident, :feeling, :expectation, :importance, :user_id, :sprint_id, :shared, :resolved)
+      params.require(:card).permit(:sentiment, :incident, :feeling, :expectation, :importance)
   end
 
 end

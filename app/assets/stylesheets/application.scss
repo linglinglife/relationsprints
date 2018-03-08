@@ -19,14 +19,29 @@
 
 body {
   background-image: url("blue.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1, p, span {
   color: white;
+  text-align: center;
+
 }
 
 .cardlist {
-  border: 1px solid black;
+  border: 2px solid white;
   padding: 1em;
   border-radius: 0.5em;
+}
+
+.card {
+  border: 1.5px solid black;
+  margin: 5px;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+
+h3 {
+  color: black;
 }

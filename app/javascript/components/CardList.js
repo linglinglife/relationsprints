@@ -19,7 +19,7 @@ export default class CardList extends Component {
 
     const info = this.props.cards.map( card => {
       return (
-        <div>
+        <div className="card" key={card.id}>
           <span>What happened?</span>
           <p>{card.incident}</p>
           <span>How do you feel about it?</span>
@@ -36,7 +36,8 @@ export default class CardList extends Component {
     return (
       <div className="col-md-4">
         <h1>{this.props.sentiment}</h1>
-        <div className="cardlist">{info}</div>
+        <button onClick={ () => this.props.onaddclick(this.props.sentiment) }>+</button>
+        <div className="cardlist">{info.reverse()}</div>
       </div>
 
     );
