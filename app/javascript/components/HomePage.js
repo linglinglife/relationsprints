@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Modal from 'react-modal';
 
+import CardList from '../components/CardList';
+
 // Modal.setAppElement('#app');
 
 const customStyles = {
@@ -16,7 +18,6 @@ const customStyles = {
   }
 };
 
-import CardList from '../components/CardList';
 
 export default class HomePage extends Component {
 
@@ -103,6 +104,7 @@ render() {
       sentiment={key}
       cards={this.state.sentiments[key]}
       key={key}
+      // user={user.id}
       onaddclick={ this.openModal }
     />;
   });

@@ -5,7 +5,7 @@ class WorkspacesController < ApplicationController
   # end
 
   def index
-
+    render json: @current_user.workspaces.order(:created_at).reverse, include: [:sprints, :users]
   end
 
   # components:

@@ -1,18 +1,51 @@
+<div class="container">
+    <div class="container__item landing-page-container">
+        <div class="content__wrapper">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">RS</a>
+            <header class="header">
+                <div class="menu-icon header__item">
+                    <span class="menu-icon__line"></span>
+                </div>
+
+                <h1 class="heading header__item">Build More Conscious Relationships</h1>
+            </header>
+
+            <div class="ellipses-container">
+
+                <h2 class="greeting">
+                  Relat
+                  <br>
+                  ions
+                  <br>
+                  pri
+                  <br>
+                  nt
+                  <br>
+                  s
+                </h2>
+
+                <div class="ellipses ellipses__outer--thin">
+
+                    <div class="ellipses ellipses__orbit"></div>
+
+                </div>
+
+                <div class="ellipses ellipses__outer--thick"></div>
+            </div>
+
+            <div class="scroller">
+
+                <p class="page-title"><%= link_to 'sign up', new_user_path %></p>
+                <p class="page-title"><%= link_to 'login', login_path %></p>
+
+                <div class="timeline">
+                    <span class="timeline__unit"></span>
+                    <span class="timeline__unit timeline__unit--active"></span>
+                    <span class="timeline__unit"></span>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to 'Sign Up', new_user_path %></li>
-      <li><%= link_to 'Login', login_path %></li>
-    </ul>
-  </div>
-</nav>
 
-
-<h1>Relationsprint</h1>
-<p>Helping couples argue better</p>
-
-<%= link_to 'Sign Up!', new_user_path %>
+</div>

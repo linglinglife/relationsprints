@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 
 // import Card from '../components/Card';
 
@@ -17,7 +17,7 @@ export default class CardList extends Component {
 
   render() {
 
-    const info = this.props.cards.map( card => {
+    const cardInfo = this.props.cards.map( card => {
       return (
         <div className="card" key={card.id}>
           <span>What happened?</span>
@@ -38,7 +38,7 @@ export default class CardList extends Component {
         <h1>{this.props.sentiment}</h1>
         <div className="cardlist">
           <button onClick={ () => this.props.onaddclick(this.props.sentiment) }>+</button>
-          {info}
+          {cardInfo}
         </div>
       </div>
 

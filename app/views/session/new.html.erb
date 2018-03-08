@@ -4,14 +4,30 @@
 
 <%= flash[:error] %>
 
-<%= form_tag login_path do %>
+<%= form_tag login_path, class: 'form-horizontal' do %>
+  <div class="form-group text-center">
+    <div class="col-sm-offset-4 col-sm-4">
+      <%= label_tag :email %>
+    </div>
+    <div class="col-sm-offset-4 col-sm-4">
+      <%= email_field_tag :email %>
+    </div>
+    <div class="col-sm-offset-4 col-sm-4">
+      <%= label_tag :password %>
+    </div>
+    <div class="col-sm-offset-4 col-sm-4">
+      <%= password_field_tag :password, nil %>
+    </div>
+    <div class="col-sm-offset-2 col-sm-8">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me!
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-offset-2 col-sm-8">
+      <%= submit_tag 'Login' %>
+    </div>
 
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
-
-  <%= label_tag :password %>
-  <%= password_field_tag :password, nil %>
-
-  <%= submit_tag 'Login' %>
-
+  </div>
 <% end %>

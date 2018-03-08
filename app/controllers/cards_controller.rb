@@ -4,6 +4,7 @@ class CardsController < ApplicationController
 
   def get_user_cards
     reverse_cards = Card.order(created_at: :desc)
+    # query that gets you one workspace id for @current_user
     cards = reverse_cards.where(user: @current_user).group_by &:sentiment
     # binding.pry
     # reversed_cards = cards.order(:created_at)

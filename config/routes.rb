@@ -17,9 +17,9 @@ Rails.application.routes.draw do
   get '/app' => 'app#index'
 
   get '/workspaces' => 'workspaces#index'
-  # post '/workspaces' => 'workspaces#create'
+  post '/workspaces' => 'workspaces#create'
   # route to share workspaces
-  # => 'workspaces#share_with_user'
+  post '/workspaces/:id/share' => 'workspaces#share_with_user'
   # delete '/workspace/:id' => 'workspaces#delete'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

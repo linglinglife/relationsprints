@@ -19,20 +19,20 @@ import Workspace from '../components/Workspace';
 
 class App extends Component {
 
-  render(){
-    return (
-      <Router>
-        <div>
-          <h1>RELATIONSPRINT</h1>
+render(){
+  return (
+    <Router>
+      <div>
+        <h1>Relationsprint</h1>
 
-            <Route exact path="/" component={ HomePage } />
-            <Route exact path="/workspaces" component={ Workspace }/>
-            {/* <Route path="/card/:id" component={ ShowCard }/> */}
+          <Route exact path="/" component={ HomePage } />
+          <Route exact path="/workspaces" component={ Workspace }/>
+          {/* <Route path="/card/:id" component={ ShowCard }/> */}
 
-          </div>
-      </Router>
-    )
-  }
+        </div>
+    </Router>
+  )
+}
 }
 
 // if (document.getElementById('app')){
