@@ -23,7 +23,8 @@ render(){
   return (
     <Router>
       <div>
-        <h1>Relationsprint</h1>
+        <h1>RELATIONSPRINT</h1>
+        {/* <button className="btn pull-right">Change Workspaces</button> */}
 
           <Route exact path="/" component={ HomePage } />
           <Route exact path="/workspaces" component={ Workspace }/>

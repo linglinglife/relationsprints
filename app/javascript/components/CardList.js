@@ -37,7 +37,9 @@ export default class CardList extends Component {
       <div className="col-md-4">
         <h1>{this.props.sentiment}</h1>
         <div className="cardlist">
-          <button onClick={ () => this.props.onaddclick(this.props.sentiment) }>+</button>
+          <div className="center-block" onClick={ () => this.props.onaddclick(this.props.sentiment) }>
+            <p className="glyphicon glyphicon-plus add"></p>
+          </div>
           {cardInfo}
         </div>
       </div>

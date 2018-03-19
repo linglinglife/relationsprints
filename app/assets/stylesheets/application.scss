@@ -22,7 +22,6 @@
 
 $tiber: #09383E;
 $elephant: #0C383E;
-$white: #fff;
 
 
 body {
@@ -30,30 +29,49 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
 }
 //
-h1, p, span {
-  color: $tiber;
+
+
+p, span {
+  color: white;
   text-align: center;
   font-family: 'Nunito', sans-serif;
 }
-//
-// .cardlist {
-//   border: 2px solid white;
-//   padding: 1em;
-//   border-radius: 0.5em;
-// }
-//
-// .card {
-//   border: 1.5px solid black;
-//   margin: 5px;
-//   padding: 2em;
-//   border-radius: 0.5em;
-// }
-//
-// h3, button {
-//   color: black;
-// }
+
+h1 {
+  color: $tiber;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 40px;
+  text-shadow: 2px 2px white;
+}
+
+.cardlist {
+  border: 2px solid white;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  border: 1.5px solid black;
+  margin: 5px;
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px;
+  // opacity: 0.5;
+}
+
+.add {
+  vertical-align: middle;
+  text-align: center;
+}
+
+h3, button {
+  color: black;
+}
 
 
 // rem font sizing.
@@ -69,10 +87,6 @@ h1   { font-size: 2.4rem; } /* =24px */
     width: 100%;
     min-height: 100%;
     height: 90rem;
-    // background-image: url('http://usersthink.com/wp-content/uploads/78-usersthink-stock-image.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: bottom;
     overflow: hidden;
     font-family: 'Nunito', sans-serif;
     color: $tiber;

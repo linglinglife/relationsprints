@@ -12,9 +12,6 @@
     "react-router-dom": "^4.2.2",
     "webpack-cli": "^2.0.10"
   },
-  "devDependencies": {
-    "webpack-dev-server": "^2.11.1"
-  },
   "scripts": {
     "start": "node ./application.js"
   }
